@@ -25,6 +25,18 @@ To run console with auth use this command:
 docker run -d -p 2080:2080 --link beanstalkd:beanstalkd -e BEANSTALK_SERVERS=beanstalkd:11300 -e AUTH=enable -e AUTH_USERNAME=admin -e AUTH_PASSWORD=password schickling/beanstalkd-console
 ```
 
+## Development
+
+### Updating to new versions of beanstalkd_console
+
+Use the `bump.sh` utility to upgrade from `a.b.c` to `x.y.z`:
+
+```sh
+./bump.sh a.b.c x.y.z
+```
+
+Then commit, `docker build ...`, and `docker push` as usual.
+
 ## License and Credit
 
 MIT License.
